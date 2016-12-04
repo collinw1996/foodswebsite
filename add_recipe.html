@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipes</title>
+</head>
+<body>
+  <header>
+      <h1>Favorite Foods</h1>
+      <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="recipes.html">Recipes</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="sign_up.html">Sign up</a></li>
+          </ul>
+      </nav>
+  </header>
+  <button><a href = "add_recipe.html">Add a recipe</a></button>
+  <button><a href = "update_recipe.html">Update a recipe</a></button>
+  <button><a href = "delete_recipe.html">Delete a recipe<a></button>
+  <form action="selectallfood.php" method="post">
+		<fieldset>
+			Click here to see all recipes!<input type="submit" />
+	</form>
+	<form action="selectbytype.php" method="post">
+		Select recipe by type: <select name="type">
+		<option value="Italian">Italian</option>
+		<option value="Mexican">Mexican</option>
+		<option value="American">American</option>
+	</select>
+		<input type="submit" />
+		</fieldset>
+	</form>
+</body>
+</html>
