@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Recipes</title>
+    <link rel="stylesheet" type ="text/css" href="application.css">
 </head>
 <body>
   <header>
@@ -16,9 +17,13 @@
           </ul>
       </nav>
   </header>
-  <button><a href = "add_recipe.html">Add a recipe</a></button>
-  <button><a href = "update_recipe.html">Update a recipe</a></button>
-  <button><a href = "delete_recipe.html">Delete a recipe<a></button>
+  <div class = "recipeforms">
+  <ul>
+    <li><a href = "add_recipe.html">Add a recipe</a></li>
+    <li><a href = "update_recipe_form.php">Update a recipe</a></li>
+    <li><a href = "delete_recipe_form.php">Delete a recipe<a></li>
+  </ul>
+</div>
   <form action="selectallfood.php" method="post">
 		<fieldset>
 			Click here to see all recipes!<input type="submit" />
@@ -32,5 +37,15 @@
 		<input type="submit" />
 		</fieldset>
 	</form>
+  <h3>Mexican Recipes</h3>
+  <p><a href="beef_chimichanga.html">Beef Chimichangas</a></p>
+  <h3>Italian Recipes</h3>
+  <p><a href="chicken_parmesan.html">Chicken Parmesan</a></p>
+  <h3>American Recipes</h3>
+  <p><a href="apple_pie.html">Apple Pie</a></p>
+  <footer>
+    <p><a href="index.html">Home</a> | <a href="recipes.html">Recipes</a> | <a href="resources.html">Resources</a></p>
+    <p><div id="em">Copyright &copy; 2016 Favorite Foods</div></p>
+  </footer>
 </body>
 </html>

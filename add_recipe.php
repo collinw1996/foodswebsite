@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Recipe</title>
+    <link rel="stylesheet" type ="text/css" href="application.css">
+</head>
+<body>
+<header>
+    <h1>Favorite Foods</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="sign_up.html">Sign up</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
 <?php
 include 'db.inc.php';
 // Connect to MySQL DBMS
@@ -8,14 +28,25 @@ if (!($connection = @ mysql_connect($hostName, $username,
 if (!mysql_select_db($databaseName, $connection))
   showerror();
 
-$query = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('John', 'Doe', 'john@example.com')";
+$id = '';
+$type = $_POST["type"];
+$recipe = $_POST["recipe"];
+$rate = $_POST["rating"];
+$price = $_POST["price"];
 
-if (!($result = @ mysql_query($query, $conn))) {
-    showerror();
-} else {
+$query = "INSERT INTO foods (id, type, recipe, rating, price)
+VALUES ('$id', '$type', '$recipe', '$rating', '$price')";
+
+
+if (mysql_query($query, $connection)) {
     echo "New record created successfully";
+} else {
+    showerror();
 }
-
-mysql_close($conn);
 ?>
+<footer>
+  <p><a href="index.html">Home</a> | <a href="recipes.html">Recipes</a> | <a href="resources.html">Resources</a></p>
+  <p><div id="em">Copyright &copy; 2016 Favorite Foods</div></p>
+</footer>
+</body>
+</html>

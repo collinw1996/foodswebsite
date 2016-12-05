@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>By Type of Food</title>
+    <title>All Foods</title>
     <link rel="stylesheet" type ="text/css" href="application.css">
 </head>
 <body>
@@ -18,34 +18,34 @@
     </nav>
 </header>
 <body>
-<div id="main">
-<?php if(!empty($_POST['type'])) {
- echo "<table border=1>
- <tr><th>ID</th><th>Type</th><th>Recipe</th><th>Rating</th>
- <th>Price</th></tr>";
+ <div id="main">
+ <table border=1>
+ <tr><th>ID</th><th>Username</th><th>Email</th><th>Password</th></tr>
+ <?php
  include 'db.inc.php';
  // Connect to MySQL DBMS
  if (!($connection = @ mysql_connect($hostName, $username,
- $password)))
- showerror();
+   $password)))
+   showerror();
  // Use the foods database
  if (!mysql_select_db($databaseName, $connection))
- showerror();
- // Create SQL statement
- $type = $_POST['type'];
- $query = "SELECT * FROM foods WHERE type='$type'";
+   showerror();
+
+
+
+// Create SQL statement
+ $query = "SELECT * FROM users";
  // Execute SQL statement
  if (!($result = @ mysql_query ($query, $connection)))
- showerror();
+   showerror();
  // Display results
  while ($row = @ mysql_fetch_array($result))
- echo "<tr><td>{$row["id"]}</td>
- <td>{$row["type"]}</td>
- <td>{$row["recipe"]}</td>
- <td>{$row["rating"]}</td>
- <td>{$row["price"]}</td></tr>";
- echo "</table>";
- } ?>
+   echo "<tr><td>{$row["id"]}</td>
+ <td>{$row["username"]}</td>
+ <td>{$row["email"]}</td>
+ <td>{$row["password"]}</td></tr>";
+ ?>
+ </table>
  </div>
  <footer>
    <p><a href="index.html">Home</a> | <a href="recipes.html">Recipes</a> | <a href="resources.html">Resources</a></p>

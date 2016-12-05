@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Delete Recipe</title>
+    <title>Add Recipe</title>
     <link rel="stylesheet" type ="text/css" href="application.css">
 </head>
 <body>
@@ -28,18 +28,21 @@ if (!($connection = @ mysql_connect($hostName, $username,
 if (!mysql_select_db($databaseName, $connection))
   showerror();
 
-$delete = $_POST["delete"];
+$id = '';
+$username = $_POST["username"];
+$email = $_POST["email"];
+$password = $_POST["password"];
 
-// query to delete a record
-$query = "DELETE FROM foods WHERE id=$delete";
+$query = "INSERT INTO users (id, username, email, password)
+VALUES ('$id', '$username', '$email', '$password')";
 
 if (mysql_query($query, $connection)) {
-    echo "Recipe deleted successfully";
+    echo "New user created successfully";
 } else {
     showerror();
 }
 
-mysqli_close($conn);
+mysql_close($conn);
 ?>
 <footer>
   <p><a href="index.html">Home</a> | <a href="recipes.html">Recipes</a> | <a href="resources.html">Resources</a></p>

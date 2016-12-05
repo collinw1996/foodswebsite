@@ -1,12 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="PHP Styling.css"/>
-<title>Foods</title>
+    <meta charset="UTF-8">
+    <title>All Foods</title>
+    <link rel="stylesheet" type ="text/css" href="application.css">
 </head>
- <body>
+<body>
+<header>
+    <h1>Favorite Foods</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="sign_up.html">Sign up</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
  <div id="main">
  <table border=1>
- <tr><th>ID</th><th>Make</th><th>Model</th><th>Year</th>
+ <tr><th>ID</th><th>Type</th><th>Recipe</th><th>Rating</th>
  <th>Price</th></tr>
  <?php
  include 'db.inc.php';
@@ -17,8 +31,6 @@
  // Use the foods database
  if (!mysql_select_db($databaseName, $connection))
    showerror();
-
-
 
 // Create SQL statement
  $query = "SELECT * FROM foods";
@@ -35,6 +47,9 @@
  ?>
  </table>
  </div>
+ <footer>
+   <p><a href="index.html">Home</a> | <a href="recipes.html">Recipes</a> | <a href="resources.html">Resources</a></p>
+   <p><div id="em">Copyright &copy; 2016 Favorite Foods</div></p>
+ </footer>
  </body>
-
 </html>
