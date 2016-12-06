@@ -12,6 +12,7 @@ $hostName = "collindatabase.cwjpjdiamqum.us-east-1.rds.amazonaws.com";
 
 $databaseName = "collindatabase";
  $username = "collindatabase";
+$port = 3306;
 
 
 // Show an error and stop the script
