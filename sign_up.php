@@ -44,6 +44,7 @@ if (mysql_query($query, $connection)) {
 
 mysql_close($conn);
 ?>
+<hr/>
 <footer>
   <p><a href="index.html">Home</a> | <a href="recipes.html">Recipes</a> | <a href="resources.html">Resources</a></p>
   <p><div id="em">Copyright &copy; 2016 Favorite Foods</div></p>
