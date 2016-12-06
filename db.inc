@@ -8,12 +8,11 @@
 
 */
 
-$hostName = "localhost:/usr/cis/var/triton.sock";
+$hostName = "collindatabase.cwjpjdiamqum.us-east-1.rds.amazonaws.com";
 
-$databaseName = "cwoodr4db";
- $username = "cwoodr4";
+$databaseName = "collindatabase";
+ $username = "collindatabase";
 
- $password = "Cosc*pfby";
 
 // Show an error and stop the script
 
