@@ -11,7 +11,7 @@
 $hostName = "collindatabase.cwjpjdiamqum.us-east-1.rds.amazonaws.com";
 
 $databaseName = "collindatabase";
- $username = "collindatabase";
+$username = "collindatabase";
 $port = 3306;
 
 
