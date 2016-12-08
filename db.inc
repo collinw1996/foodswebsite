@@ -8,7 +8,7 @@
 
 */
 
-$hostName = "collindatabase.cwjpjdiamqum.us-east-1.rds.amazonaws.com";
+$hostName = "cwjpjdiamqum.us-east-1.rds.amazonaws.com";
 
 $databaseName = "collindatabase";
 $username = "collindatabase";
